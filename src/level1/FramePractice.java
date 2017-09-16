@@ -1,4 +1,4 @@
-package Package;
+package level1;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;

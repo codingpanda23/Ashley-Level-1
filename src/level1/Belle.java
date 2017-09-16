@@ -1,4 +1,4 @@
-package Package;
+package level1;
 
 public class Belle {
 	String myName;

@@ -1,4 +1,4 @@
-package Package;
+package level1;
 
 // Copyright Wintriss Technical Schools 2013
 
@@ -39,7 +39,7 @@ public class DrumKit extends MouseAdapter {
    	 	DrumKit.add(Panel);
    	 // 7. Download an image of a drum from the Internet. Drop it into your Eclipse project under "Package".
    	 // 8. Put the name of your image in a String variable.
-   	 	String Drum = "Drum.jpg";
+   	 	String Drum = "fierydrum.jpg";
    	 // 9. Edit the next line to use your String variable
    	 	drumLabelWithImage = createLabelImage(Drum);
    	 
@@ -61,7 +61,9 @@ public class DrumKit extends MouseAdapter {
    	 // 16. If they clicked on the drumImage...
 
    		 // 17. ...use the playSound method to play a drum sound.
-
+   	 		if (e.getSource() == drumLabelWithImage) {
+				playSound("sound.wav");
+			}
    	 // 18. Add more images to make a drumkit. Remember to add a mouse listener to each one.
     }
 
