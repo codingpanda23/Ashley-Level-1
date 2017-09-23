@@ -65,6 +65,8 @@ public class DrumKit extends MouseAdapter {
 				playSound("sound.wav");
 			}
    	 // 18. Add more images to make a drumkit. Remember to add a mouse listener to each one.
+    
+    
     }
 
     private JLabel createLabelImage(String fileName)
