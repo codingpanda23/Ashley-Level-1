@@ -138,6 +138,10 @@ public class Jeopardy implements ActionListener {
 			// Call the askQuestion() method with a harder question
 			askQuestion("Who has one of the widest mouth width?","Tasmanian Tiger",800);
 		}
+		else if (buttonPressed == fifthButton) {
+			// Call the askQuestion() method with a harder question
+			askQuestion("True ot False: Dinosaurs lived on Antarctica.","True",1000);
+		}
 		
 		
 		
@@ -148,7 +152,7 @@ public class Jeopardy implements ActionListener {
 
 	private void askQuestion(String question, String correctAnswer, int prizeMoney) {
 		// Remove this temporary message
-		JOptionPane.showMessageDialog(null, "this is where the question will be asked");
+		//JOptionPane.showMessageDialog(null, "this is where the question will be asked");
 		// Use a pop up to ask the user the question
 		String answer = JOptionPane.showInputDialog(null, question);
 		// If the answer is correct
@@ -167,7 +171,7 @@ public class Jeopardy implements ActionListener {
 			// Decrement the score by the prizeMoney
 			score = score - prizeMoney;
 			// Pop up a message to tell the user the correct answer
-			JOptionPane.showMessageDialog(null, "Wrong!! The answer was" + correctAnswer);
+			JOptionPane.showMessageDialog(null, "Wrong!! The answer was " + correctAnswer);
 			// Call the updateScore() method
 			updateScore();
 		}
