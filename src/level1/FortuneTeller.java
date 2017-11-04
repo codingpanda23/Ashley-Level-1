@@ -44,23 +44,52 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
    	 	System.out.println(mouseX + " " + mouseY);
    	 // 6. Add the mouseY variable to the previous line so that it prints out too (no new line)
    	 // 7. Adjust your secret location coordinates here:
-   	 int secretLocationX = 0;
-   	 int secretLocationY = 0;
+   	 int secretLocationX = 526;
+   	 int secretLocationY = 170;
    	 /** If the mouse coordinates and secret location are close, we'll let them ask a question. */
    	 if (areClose(mouseX, secretLocationX) && areClose(mouseY, secretLocationY)) {
    		 // 8. Get the user to enter a question for the fortune teller
-
+   		 	JOptionPane.showInputDialog("Give Ms. Fortune a yes or no question to reveal your fortune!");
    		 // 9. Find a spooky sound and put it in your default package (freesound.org)
-   		 // AudioClip sound = JApplet.newAudioClip(getClass().getResource("spooky.aif"));
+   		 	AudioClip sound = JApplet.newAudioClip(getClass().getResource("spooky.wav"));
    		 // 10. Play the sound
-
+   		 	sound.play();
    		 // 11. Use the pause() method below to wait until your music has finished
-
+   		 	pause(32);
    		 // 12. Insert your completed Magic 8 ball recipe (http://bit.ly/Zdrf6d) here
+   			
+   			// 2. Make a variable that will hold a random number and put a random number into this variable using "new Random().nextInt(4)"
+   				int random = new Random().nextInt(4);
+   			// 3. Print out this variable
+   				System.out.println(random);
+   			// 4. Get the user to enter a question for the 8 ball
+   				
+   			// 5. If the random number is 0
+   				if (random == 0) {
+   			// -- tell the user "Yes"
+   				JOptionPane.showMessageDialog(null, "Yes-er-ee!!!");
+   				}
+   			// 6. If the random number is 1
+   				if (random == 1) {
+   			// -- tell the user "No"
+   				JOptionPane.showMessageDialog(null, "NO, YOU FOOL!!");
+   				}
+   			// 7. If the random number is 2
+   				if (random == 2) {
+   			// -- tell the user "Maybe you should ask Google?"
+   				JOptionPane.showMessageDialog(null, "Ask GOOGLE, you DUM DUM! I DON'T know EVERYTHING!!!");
+   				}
+   			// 8. If the random number is 3
+   				if (random == 3) {
+   			// -- write your own answer
+   				JOptionPane.showMessageDialog(null, "YOU BROKE THE BALL YOU IDJIT!! ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR ERROR (e.t.c.)");
+   				}
+   		}
 
-   	 }
+   		}
+   	 
 
-    }
+    
 
     private boolean areClose(int mouseX, int secretLocationX) {
    	 return mouseX < secretLocationX + 15 && mouseX > secretLocationX - 15;
