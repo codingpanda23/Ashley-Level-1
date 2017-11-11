@@ -136,11 +136,11 @@ public class Jeopardy implements ActionListener {
 		}
 		else if (buttonPressed == fourthButton) {
 			// Call the askQuestion() method with a harder question
-			askQuestion("Who has one of the widest mouth width?","Tasmanian Tiger",800);
+			askQuestion("Which extinct animal has one of the widest mouth widths?","Tasmanian Tiger",800);
 		}
 		else if (buttonPressed == fifthButton) {
 			// Call the askQuestion() method with a harder question
-			askQuestion("True ot False: Dinosaurs lived on Antarctica.","True",1000);
+			askQuestion("True or False: Dinosaurs lived on Antarctica.","True",1000);
 		}
 		
 		
