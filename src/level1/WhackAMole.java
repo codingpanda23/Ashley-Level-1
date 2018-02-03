@@ -38,7 +38,6 @@ void createButton(int random) {
 			button.addActionListener(this);
 		}
 	}
-
 	
 }
 
