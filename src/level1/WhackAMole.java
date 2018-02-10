@@ -2,10 +2,12 @@ package level1;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Date;
 import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class WhackAMole implements ActionListener {
@@ -60,4 +62,11 @@ public class WhackAMole implements ActionListener {
 			e.printStackTrace();
 		}
 	}
+
+	private void endGame(Date timeAtStart, int molesWhacked) {
+		Date timeAtEnd = new Date();
+		JOptionPane.showMessageDialog(null, "Your whack rate is "
+				+ ((timeAtEnd.getTime() - timeAtStart.getTime()) / 1000.00 / molesWhacked) + " moles per second.");
+	}
+
 }
